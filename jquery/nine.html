@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("p").on({
+mouseenter:function(){
+$(this).css("background-color","blue");
+},
+mouseleave:function(){
+$(this).css("background-color","red");
+},
+click:function(){
+$(this).css("background-color","grey");
+}
+});
+});
+</script>
+</head>
+<body>
+<p>Enter paragrpaph</p>
+</body>
+</html>
