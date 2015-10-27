@@ -1,0 +1,110 @@
+<html>
+<head>
+
+
+
+<link rel="stylesheet" type="text/css" href="design.css">
+<script type="text/javascript">
+function myFunction()
+ {
+    var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?";
+
+          for (var i = 0; i < document.form.name.value.length; i++) {
+           if (iChars.indexOf(document.form.name.value.charAt(i)) != -1) {
+            alert ("Your username has special characters.These are not allowed");
+    document.form.name.focus();
+            return false;
+			
+			
+			
+			
+			
+			}
+			}
+			
+			
+
+
+
+ }
+function validation()
+{
+var a = document.form.name.value;
+
+if(a=="")
+{
+alert("Please Enter Your Name");
+document.form.name.focus();
+return false;
+}
+c=/^\w+$/;
+if(!c.test(a))
+{
+alert("username must have characters,numbers ,underscore");
+document.form.name.focus();
+return false;
+}
+
+else if ((a.length < 5) || (a.length > 15))
+{
+alert("Your Character must be 5 to 15 Character");
+document.form.name.select();
+return false;
+}
+
+
+var b=document.form.password.value;
+if(b=="")
+{
+  alert("please enter password field");
+  document.form.password.focus();
+  return false;
+}
+
+
+}
+</script>
+
+
+
+
+</head>
+<body><center>
+<form action=menu.html name="form" onsubmit=" return validation()" method="post">
+
+
+<div id="division">
+<fieldset class="fieldset">
+	<legend>LoginPage</legend>
+<p class="p1">
+Username:<span style="padding-left:3px"><input type="text"  name="name" placeholder="username" oninput="return myFunction()"/>
+</p>
+
+
+<p calss="p3">
+Password:<span style="padding-left:5px"><input type="password" name="password" placeholder="password"/>
+</p>
+<p class="p2">
+<span style="padding-right:5px"><input type="submit" value="submit"/>
+
+</p>
+
+
+<p class="pr">
+Welcome to Tudip Technologies
+</p></a>
+
+
+</fieldset>
+</div>
+</form></center>
+</body>
+</html>
+
+
+
+
+
+
+
+
